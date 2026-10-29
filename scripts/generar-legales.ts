@@ -143,7 +143,7 @@ ${items}
 
       <div class="block block-crisis">
         <h2>Si necesitas hablar con alguien</h2>
-        <p class="note">Aluzia te acompaña cada mañana, pero no sustituye el apoyo de un profesional. Si estás pasando por un momento difícil, estas líneas son reales, gratuitas, y siempre hay alguien del otro lado.</p>
+        <p class="note">Aluzia te acompaña, pero no sustituye el apoyo de un profesional. Si estás pasando por un momento difícil, estas líneas son reales, gratuitas, y siempre hay alguien del otro lado.</p>
         <div class="crisis-line">
           <div><span class="crisis-name">SAPTEL</span><span class="crisis-desc">apoyo emocional por teléfono · 24 horas</span></div>
           <a href="tel:5552598121" class="crisis-tel">55 5259 8121</a>
