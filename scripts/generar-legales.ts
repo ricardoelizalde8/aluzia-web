@@ -66,12 +66,19 @@ const FOOTER = `  <footer class="site-footer">
     <p class="footer-copy">&copy; 2026 César Ricardo Elizalde Hernández · Todos los derechos reservados</p>
   </footer>`;
 
+const CANONICAL: Record<'privacidad' | 'terminos' | 'soporte', string> = {
+  privacidad: 'https://aluzia.app/privacidad/',
+  terminos:   'https://aluzia.app/terminos/',
+  soporte:    'https://aluzia.app/soporte/',
+};
+
 function page(
   title: string,
   current: 'privacidad' | 'terminos' | 'soporte',
   description: string,
   body: string,
 ): string {
+  const url = CANONICAL[current];
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -80,7 +87,26 @@ function page(
   <title>${title} — Aluzia</title>
   <meta name="description" content="${description}">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0F1738">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aluzia — El cosmos te habla">
+  <meta property="og:description" content="Cartas del cosmos para ti.">
+  <meta property="og:image" content="https://aluzia.app/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="${url}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aluzia — El cosmos te habla">
+  <meta name="twitter:description" content="Cartas del cosmos para ti.">
+  <meta name="twitter:image" content="https://aluzia.app/og-image.jpg">
 ${FONTS}
   <link rel="stylesheet" href="/assets/aluzia.css">
 </head>
